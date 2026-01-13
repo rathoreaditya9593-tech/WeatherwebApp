@@ -1,0 +1,88 @@
+/* ===== Global Reset & Font ===== */
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Body Layout ===== */
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #f4f6f8;
+}
+
+/* ===== Links ===== */
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+/* ===== Headings ===== */
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 0.3em;
+}
+
+h4 {
+    margin-top: 0;
+    color: #555;
+}
+
+/* ===== Buttons (MUI Safe) ===== */
+/* Let MUI handle button styling */
+button {
+    all: unset;
+}
+
+/* ===== App Container (use className="app") ===== */
+.app {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===== Search Box ===== */
+.Searchbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.Searchbox form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== Error Text ===== */
+.Searchbox p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* ===== Product / Card Style ===== */
+.product {
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 12px 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 12px;
+}

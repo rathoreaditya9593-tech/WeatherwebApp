@@ -1,0 +1,81 @@
+/* Reset and box sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page body */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; /* centers app horizontally */
+    align-items: flex-start; /* start from top with some padding */
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* pinkish gradient */
+    animation: bgAnim 20s ease-in-out infinite alternate; /* smooth color change */
+    overflow-x: hidden;
+    padding-top: 30px; /* space from top */
+}
+
+/* Background animation */
+@keyframes bgAnim {
+    0%   { background: linear-gradient(to right, #ff758c, #ff7eb3); }
+    25%  { background: linear-gradient(to right, #ff9a9e, #fad0c4); }
+    50%  { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+    75%  { background: linear-gradient(to right, #fbc2eb, #ff758c); }
+    100% { background: linear-gradient(to right, #ff758c, #ff7eb3); }
+}
+
+/* App container */
+.app {
+    width: 90%;             /* keep wide but leave small margins */
+    max-width: 1000px;      /* wide layout for desktop */
+    min-width: 600px;       /* maintain good readability */
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+.app h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.4);
+}
+
+/* Optional overlay for card readability */
+.background-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media(max-width: 1200px) {
+    .app {
+        width: 95%;
+        min-width: 500px;
+    }
+}
+
+@media(max-width: 800px) {
+    .app {
+        width: 100%;
+        min-width: 100%;
+        padding: 15px;
+    }
+    .app h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .app h1 {
+        font-size: 2rem;
+    }
+}
